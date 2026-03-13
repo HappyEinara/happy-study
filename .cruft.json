@@ -1,0 +1,25 @@
+{
+  "template": "git+ssh://git@github.com/HappyEinara/templates.git",
+  "commit": "9055c0557902df1df354eabd34cfe4a0228c2fa4",
+  "checkout": "template-python-application",
+  "context": {
+    "cookiecutter": {
+      "project": "Happy Study",
+      "package": "happystudy",
+      "slug": "happy-study",
+      "cli_command": "happy-study",
+      "author": "Happy Singer",
+      "author_email": "happy.singer@einara.com",
+      "github_username": "HappyEinara",
+      "envvar_prefix": "HS",
+      "repo_url": "https://github.com/HappyEinara/happy-study",
+      "description": "Happy's Study Tools",
+      "_copy_without_render": [
+        "*.github/workflows/*.yaml"
+      ],
+      "_template": "git+ssh://git@github.com/HappyEinara/templates.git",
+      "_commit": "9055c0557902df1df354eabd34cfe4a0228c2fa4"
+    }
+  },
+  "directory": null
+}
