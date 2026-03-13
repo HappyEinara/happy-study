@@ -20,8 +20,8 @@ test: ensure-uv
 check-version: ensure-uv 
 	uv run invoke check-version
 
-tag-release: install-uv 
+tag-release: ensure-uv 
 	uv run invoke tag-release
 
-bump-version: install
+bump-version: ensure-uv 
 	uv version --bump patch | tail -n 1 | sed 's/^Bumping/Bump/'
