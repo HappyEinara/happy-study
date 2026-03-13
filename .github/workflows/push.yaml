@@ -1,0 +1,27 @@
+---
+name: Push checks
+on: [push]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v6
+
+    - name: Build local image
+      run: docker build -t make -f .github/workflows/make.Dockerfile .
+
+    - name: Run container and execute command
+      run: docker run make lint
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v6
+
+    - name: Build local image
+      run: docker build -t make -f .github/workflows/make.Dockerfile .
+
+    - name: Run container and execute command
+      run: docker run make test
