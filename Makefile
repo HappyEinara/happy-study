@@ -19,6 +19,7 @@ test: ensure-uv
 
 lint: ensure-uv
 	uv run ruff check
+	uv run pre-commit run --all-files
 
 check-version: ensure-uv
 	uv run invoke check-version

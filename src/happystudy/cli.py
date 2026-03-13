@@ -1,4 +1,5 @@
 """The CLI."""
+
 # pylint: disable=unused-argument
 
 import logging
