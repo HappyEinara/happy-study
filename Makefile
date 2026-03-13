@@ -18,7 +18,7 @@ test: ensure-uv
 	uv run pytest
 
 lint: ensure-uv
-	echo "Linting." && uv run ruff check
+	uv run ruff check
 
 check-version: ensure-uv
 	uv run invoke check-version

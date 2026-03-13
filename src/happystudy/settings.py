@@ -12,14 +12,12 @@ class Settings(pydantic_settings.BaseSettings):
     """Application settings class."""
 
     debug: bool = False
-    testing: bool = False
     log_dir: Optional[pathlib.Path] = None
 
-    class Config:
-        """Config metadata for the settings."""
-
-        case_sensitive: bool = False
-        env_prefix: str = "HS_"
+    model_config = {
+        "case_sensitive": False,
+        "env_prefix": "HS_",
+    }
 
 
 settings = Settings()

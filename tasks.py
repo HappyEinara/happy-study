@@ -4,6 +4,7 @@ import sys
 import warnings
 
 import git
+import git.exc
 import git.repo
 import invoke
 import semver
@@ -117,8 +118,8 @@ def _validate_branch(branch: str, remote_name: str) -> None:
         )
 
 
-@invoke.task
-def check_version(context):
+@invoke.task  # type: ignore
+def check_version(_):
     """Check the version is present, valid and ahead of the last release."""
 
     try:
@@ -128,8 +129,8 @@ def check_version(context):
         sys.exit(1)
 
 
-@invoke.task
-def tag_release(context):
+@invoke.task  # type: ignore
+def tag_release(_):
     """Tag the current commit on main with the latest version."""
 
     version = _get_current_version()
